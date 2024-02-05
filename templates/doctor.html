@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    
+    {% load static %}
+    <title>Online Consultation</title>
+  
+{% endblock head %}
+{% block body %}
+
+    <h1 style="text-align:center"><i><br>Consult our doctors online!<br><i></h1>
+        <p></p>
+        <h3 style="text-align:center">Doctors available at the moment<br><br></h3>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+    <div class="card mb-4" style="width: 18rem;">
+        <img src="static/images/olivia.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Dr. Olivia Lawson</h5>
+          <p class="card-text"><b>Degree:</b> Psychiatrist with a focus on Mood Disorders<br>
+            <b>Achievements:</b> Implemented innovative treatment plans combining medication and therapy for resistant depression cases.<br>
+            <b>Ratings:</b> Widely respected for her compassionate and effective approach, with a 4.9-star rating.</p>
+          <a href="videocall" class="btn btn-primary">video call</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-4" style="width: 18rem;">
+        <img src="static/images/nandini.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Dr. Nandini</h5>
+          <p class="card-text"><b>Degree:</b> Clinical Psychologist specializing in Depression<br>
+            <b>Achievements:</b> Developed a successful cognitive-behavioral therapy program for depression management.<br>
+            <b>Ratings:</b> Highly regarded for his empathetic counseling, with a 4.8-star rating. </p>
+          <a href="videocall" class="btn btn-primary">video call</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-4" style="width: 18rem;">
+        <img src="static/images/maya.jpeg" class="card-img-top" alt="..." style="height:200px">
+        <div class="card-body">
+          <h5 class="card-title">Dr. Maya Benett</h5>
+          <p class="card-text">
+            <b>Degree:</b> Psychiatrist with expertise in Depression in Women<br>
+<b>Achievements:</b> Conducted research on gender-specific factors influencing depression, improving treatment outcomes for women.<br>
+<b>Ratings:</b> Recognized for her tailored approach, with a 4.9-star rating. </p>
+          <a href="videocall" class="btn btn-primary">video call</a>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+    <script src="{% static 'docScript.js' %}"></script>
+{% endblock body %}

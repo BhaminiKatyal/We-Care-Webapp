@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Mental Health Assessment</title>
+{% endblock head %}
+
+{% block body %}
+<form method = "POST">
+  {% csrf_token %}
+  
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">How often do you feel sad, depressed, or hopeless?</label>
+    <select class="form-control" id="exampleFormControlSelect1" name = "q1">
+      <option value=1>Never</option>
+      <option value=2>Sometimes</option>
+      <option value=3>Often</option>
+      <option value=4>Frequently</option>
+      <option value=5>Always</option>
+    </select>
+  </div>
+ 
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Do you have trouble sleeping or staying asleep?</label>
+    <select class="form-control" id="exampleFormControlSelect1" name = "q2">
+      <option value=1>Never</option>
+      <option value=2>Sometimes</option>
+      <option value=3>Often</option>
+      <option value=4>Frequently</option>
+      <option value=5>Always</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Do you have trouble concentrating or making decisions?</label>
+    <select class="form-control" id="exampleFormControlSelect1" name = "q3">
+      <option value=1>Never</option>
+      <option value=2>Sometimes</option>
+      <option value=3>Often</option>
+      <option value=4>Frequently</option>
+      <option value=5>Always</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Do you feel tired or fatigued most of the time?</label>
+    <select class="form-control" id="exampleFormControlSelect1" name = "q4">
+      <option value=1>Never</option>
+      <option value=2>Sometimes</option>
+      <option value=3>Often</option>
+      <option value=4>Frequently</option>
+      <option value=5>Always</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Do you feel worthless, guilty or have low self-esteem?</label>
+    <select class="form-control" id="exampleFormControlSelect1" name = "q5">
+      <option value=1>Never</option>
+      <option value=2>Sometimes</option>
+      <option value=3>Often</option>
+      <option value=4>Frequently</option>
+      <option value=5>Always</option>
+    </select>
+  </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock body %}
+
+
+  

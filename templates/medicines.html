@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Medicine</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        #cart-icon {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        #upload-prescription-heading {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #prescription-box {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #prescription-input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            width: 70%;
+            margin-right: 10px;
+        }
+
+        #go-button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        #medicine-list {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .medicine {
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            padding: 10px;
+            position: relative;
+            display: inline-block;
+            width: 200px;
+        }
+
+        .medicine-name {
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .price {
+            color: #3498db;
+        }
+
+        .buy-now, .add-to-cart {
+            color: white;
+            background-color: #3498db;
+            border: none;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input {
+            text-align: center;
+            width: 200px; /* Adjust the width as needed */
+        }
+    </style>
+{% endblock head %}
+{% block body %}
+
+    <h2 style="text-align:center"><i><br> Purchase medicines </i></h2>
+    
+<form method="POST">
+    {% csrf_token %}
+    
+    <div id="prescription-box">
+        <div id="upload-prescription-heading">Upload your prescription and we will be delivering your medicines very soon</div>
+        <input type="file" id="prescription-input" name="file" accept=".pdf">
+        <button id="go-button">Go</button>
+    </div>
+</form>
+    
+{% endblock body %}
